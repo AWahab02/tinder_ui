@@ -16,19 +16,28 @@ class _itsaMatchState extends State<itsaMatch> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 51, 51, 51),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 124),
+        padding: const EdgeInsets.symmetric(vertical: 100),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image(image: AssetImage("assets/tindertext.png")),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Image(
+                image: AssetImage("assets/tindertext.png"),
+              ),
+            ),
             // Text(
             //   "It's a Match!",
             //   style: TextStyle(fontSize: 64, color: Colors.white),
             // ),
             SizedBox(height: 20),
             Text(
-              "You and <name> have liked each other",
-              style: TextStyle(color: Colors.white, fontSize: 14),
+              "You and Ashen have liked each other",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.w200),
             ),
             SizedBox(height: 35),
             Row(
@@ -50,7 +59,7 @@ class _itsaMatchState extends State<itsaMatch> {
             SizedBox(height: 120),
             Container(
               width: 300,
-              height: 50,
+              height: 60,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(color: Colors.white, width: 1.5)),
@@ -65,7 +74,10 @@ class _itsaMatchState extends State<itsaMatch> {
                     padding: EdgeInsets.symmetric(horizontal: 12.0),
                     child: Text(
                       "Send a Message",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'Montserrat'),
                     ),
                   ),
                 ],
@@ -74,7 +86,7 @@ class _itsaMatchState extends State<itsaMatch> {
             SizedBox(height: 24),
             Container(
               width: 300,
-              height: 50,
+              height: 60,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
                   border: Border.all(color: Colors.white, width: 1.5)),
@@ -89,7 +101,10 @@ class _itsaMatchState extends State<itsaMatch> {
                     padding: EdgeInsets.symmetric(horizontal: 12.0),
                     child: Text(
                       "Keep Playing",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'Montserrat'),
                     ),
                   ),
                 ],
@@ -110,7 +125,10 @@ class _itsaMatchState extends State<itsaMatch> {
                     padding: EdgeInsets.symmetric(horizontal: 12.0),
                     child: Text(
                       "Tell your friends",
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'Montserrat'),
                     ),
                   ),
                 ],

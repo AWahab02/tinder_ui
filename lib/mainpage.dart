@@ -158,9 +158,25 @@ class MainPage extends StatelessWidget {
     bool _onSwipe(
         int previousIndex, int? currentIndex, CardSwiperDirection direction) {
       if (direction == CardSwiperDirection.right) {
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => itsaMatch(),
-        ));
+        Navigator.of(context).push(
+          PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) {
+              return itsaMatch();
+            },
+            transitionsBuilder:
+                (context, animation, secondaryAnimation, child) {
+              const begin = 0.0;
+              const end = 2.0;
+              var tween = Tween<double>(begin: begin, end: end);
+              var fadeAnimation = animation.drive(tween);
+
+              return FadeTransition(
+                opacity: fadeAnimation,
+                child: child,
+              );
+            },
+          ),
+        );
         return true;
       }
       return false;
