@@ -206,6 +206,7 @@ class MainPage extends StatelessWidget {
                           cards[index],
                   cardsCount: cards.length)),
           Expanded(
+            flex: 1,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

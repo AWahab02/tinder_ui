@@ -64,6 +64,7 @@ flutter:
   assets:
     - assets/tinder.png
     - assets/pfp.jpeg
+    - assets/tindertext.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
